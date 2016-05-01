@@ -86,6 +86,11 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
 gulp.task('scripts', function() {
   gulp.src([
     basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
+    basePaths.dev + 'js/vue.min.js', // Must be loaded before BS4
+    basePaths.dev + 'js/vue-resource.min.js', // Must be loaded before BS4
+    basePaths.dev + 'js/vue-router.min.js', // Must be loaded before BS4
+    
+
 
     // Start - All BS4 stuff
     basePaths.dev + 'js/bootstrap4/bootstrap.js', 
@@ -175,4 +180,17 @@ gulp.task('copy-assets', function() {
 // Copy Tether CSS files
     gulp.src(basePaths.bower + 'tether/dist/css/*.css')
         .pipe(gulp.dest(basePaths.dev + '/css'));
+
+// Copy VueJs
+    gulp.src(basePaths.bower + 'vue/dist/*.js')
+        .pipe(gulp.dest(basePaths.dev + '/js'));
+
+// Copy VueJs Resource
+    gulp.src(basePaths.bower + 'vue-resource/dist/*.js')
+        .pipe(gulp.dest(basePaths.dev + '/js'));
+
+// Copy Vue Router
+    gulp.src(basePaths.bower + 'vue-router/dist/*.js')
+        .pipe(gulp.dest(basePaths.dev + '/js'));
+
 });
