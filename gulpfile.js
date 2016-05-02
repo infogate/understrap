@@ -89,6 +89,7 @@ gulp.task('scripts', function() {
     basePaths.dev + 'js/vue.min.js', // Must be loaded before BS4
     basePaths.dev + 'js/vue-resource.min.js', // Must be loaded before BS4
     basePaths.dev + 'js/vue-router.min.js', // Must be loaded before BS4
+    basePaths.dev + 'js/tether.min.js', // Must be loaded before BS4
     
 
 
@@ -107,7 +108,8 @@ gulp.task('scripts', function() {
     //basePaths.dev + 'js/bootstrap4/umd/popover.js', 
     // End - All BS4 stuff
 
-    basePaths.dev + 'js/skip-link-focus-fix.js'
+    basePaths.dev + 'js/skip-link-focus-fix.js',
+    basePaths.dev + 'src/js/app.js'
     ])
     .pipe(concat('theme.min.js'))
     .pipe(uglify())
