@@ -7120,3 +7120,14 @@ a.skip-link {
       border-radius: 30px; }
     .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
       background: #869791; }
+
+.card-img-top {
+  width: 100%; }
+
+.label {
+  margin-right: 0.5em; }
+
+.spacer {
+  margin: 0;
+  padding: 0;
+  height: 50px; }
