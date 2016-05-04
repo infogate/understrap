@@ -94,7 +94,7 @@ add_action( 'after_setup_theme', 'understrap_setup' );
 add_filter( 'excerpt_more', 'new_excerpt_more' );*/
 /* Removes the ... from the excerpt read more link */
 function custom_excerpt_more( $more ) {
-	return '';
+	return '>>> CUSTOM MORE KADA JE MORE TAG DALEKO POSLE 55 RECI';
 }
 add_filter( 'excerpt_more', 'custom_excerpt_more' );
 
@@ -102,6 +102,6 @@ add_filter( 'excerpt_more', 'custom_excerpt_more' );
 
 function all_excerpts_get_more_link($post_excerpt) {
 
-    return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More...', 'understrap')  . '</a></p>';
+    return $post_excerpt . ' <p><a class="btn btn-secondary understrap-read-more-link" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More...', 'understrap')  . '</a></p>';
 }
-add_filter('wp_trim_excerpt', 'all_excerpts_get_more_link');
+// add_filter('wp_trim_excerpt', 'all_excerpts_get_more_link');
